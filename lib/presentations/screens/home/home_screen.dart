@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:widgets_app/menu/menu_items.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -41,7 +42,9 @@ class _HomeView extends StatelessWidget {
             Icons.arrow_forward_ios_rounded,
             color: colors.primary,
           ),
-          onTap: () {},
+          onTap: () {
+            context.push(menu.link);
+          },
         );
       },
     );
