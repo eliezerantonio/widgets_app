@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:widgets_app/presentations/screens/home/home_screen.dart';
 
 import 'config/app_theme.dart';
+import 'router/app_router.dart';
 
 void main() => runApp(const MyApp());
 
@@ -10,11 +10,12 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+      routerConfig: appRouter,
       title: 'Material App',
       debugShowCheckedModeBanner: false,
-      theme: AppTheme(selectedColor: 0).getTheme(),
-      home: const HomeScreen(),
+      theme: AppTheme(selectedColor: 2).getTheme(),
+     
     );
   }
 }
